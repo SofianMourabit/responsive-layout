@@ -90,8 +90,21 @@ h1.name > a {
 .footer-menu a:hover {
   color: #f4645f;
 }
+i.fa {
+    color: #f4645f;
+    padding-right: 10px;
+}
 /* ---- Layout Containers ---- */
-
+.skill-list, .skill-list h3 {
+  font-family: "Gloria Hallelujah", sans-serif;
+}
+.skill-list ul li {
+  text-align: left;
+}
+.skill-list ul {
+    margin: 1rem;
+    padding: 1rem;
+}
 
 .main-header,
 .contact,
@@ -153,11 +166,19 @@ h1.name > a {
   font-weight: bolder;
   padding-left: 5px;
 }
+ul.skill-list {
+  padding: 1em;
+  padding-top: 0px;
+  text-align: start;
+  border: 1px solid #ededed;
+  box-shadow: 2px 1px #ededed;
+  flex:1 0 40%
+}
 /* =================================
 Media Queries
 ==================================== */
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .profile,
   .main-footer,
   .contact,
@@ -189,18 +210,16 @@ Media Queries
     flex-wrap:wrap;
     width: 90%;
   }
-  .row h3 {
+  .row h3, .skills h2 {
     flex: 100%;
     margin: 2em;
   }
   .flywheel{
     display: none;
   }
-  .footer-menu{
+  .footer-menu, .skills{
     display: flex;
-  }
-  col {
-    flex: 1 50%;
+    flex-wrap: wrap;
   }
   .profile-picture {
     order: 2;
@@ -211,6 +230,7 @@ Media Queries
     font-size: 1.1em;
     text-align: left;
     padding-right: 10px;
+    flex: 1 0 70%;
   }
   .contact p{
     padding: 0 8em;
@@ -221,8 +241,20 @@ Media Queries
     padding-right: 0px;
     padding-bottom: 1em;
   }
+  .skill-list > li {
+    line-height: 1.9em;
+    font-weight: bold;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .image {
+    flex: 1 0 40%;
+  }
+
 }
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   .main-nav{
 		flex-direction: row;
 		justify-content: space-between;
